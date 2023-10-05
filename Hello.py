@@ -66,7 +66,7 @@ for param in distribution_type.keys():
 
     if distribution_type[param] == 'uniform':
 
-        min_value = st.text_input(f'Enter min value for {param}')
+        min_value = st.slider(f'Enter min value for {param}',1,100,2)
 
         max_value = st.text_input(f'Enter max value for {param}')
 
@@ -145,7 +145,3 @@ plt.legend(loc='upper right')
 # Display the plot in Streamlit
 
 st.pyplot(plt)
-
-
-if __name__ == "__main__":
-    run()
